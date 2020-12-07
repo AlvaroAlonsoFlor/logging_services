@@ -6,15 +6,11 @@ import ch.qos.logback.core.read.ListAppender;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.alvaroalonsoflor.logwriter.model.LogParameters;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.core.env.Environment;
-
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -24,16 +20,13 @@ public class LogWriterServiceTest {
     @Autowired
     private LogWriterService logWriterService;
 
-    @Autowired
-    private Environment env;
-
     private LogParameters logParameters;
 
     private ListAppender<ILoggingEvent> listAppender;
 
-    private String DEFAULT_CLIENT_ID_MESSAGE_IN_LOGS = "Client id: testId";
-    private String DEFAULT_TEST_MESSAGE_IN_LOGS = "Message: Test message";
-    private String BODY_RECEIVED = "Body received: ";
+    private final String DEFAULT_CLIENT_ID_MESSAGE_IN_LOGS = "Client id: testId";
+    private final String DEFAULT_TEST_MESSAGE_IN_LOGS = "Message: Test message";
+    private final String BODY_RECEIVED = "Body received: ";
 
     @BeforeEach
     public void setup() {

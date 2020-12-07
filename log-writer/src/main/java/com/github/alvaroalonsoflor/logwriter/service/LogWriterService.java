@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 public class LogWriterService {
     Logger logger = LoggerFactory.getLogger(LogWriterService.class);
     String CLIENT_ID = "Client id: ";
-    String MESSAGE = "Message : ";
+    String MESSAGE = "Message: ";
 
     public void writeWithLogLevels(String body) {
         logger.debug("Body received: " + body);
