@@ -17,7 +17,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest(classes = {LogWriterController.class, LogWriterService.class})
 @AutoConfigureMockMvc
-
 public class LogWriterControllerTest {
 
 
