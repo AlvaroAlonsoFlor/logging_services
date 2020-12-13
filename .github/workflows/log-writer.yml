@@ -3,10 +3,10 @@ name: log-writer ci
 on:
   push:
     paths:
-      - 'log-writer/*'
+      - 'log-writer/**'
   pull_request:
     paths:
-      - 'log-writer/*'
+      - 'log-writer/**'
 
 jobs:
   build:
