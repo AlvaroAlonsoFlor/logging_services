@@ -41,6 +41,12 @@ test {
 	finalizedBy jacocoTestReport
 }
 
+jacocoTestReport {
+	dependsOn test
+}
+
+check.finalizedBy jacocoTestCoverageVerification
+
 jacocoTestCoverageVerification {
 	violationRules {
 		rule {
@@ -49,9 +55,4 @@ jacocoTestCoverageVerification {
 			}
 		}
 	}
-}
-
-jacocoTestReport {
-	dependsOn test
-	dependsOn jacocoTestCoverageVerification
 }
