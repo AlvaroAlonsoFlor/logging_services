@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class LogWriterService {
+
     Logger logger = LoggerFactory.getLogger(LogWriterService.class);
     String CLIENT_ID = "Client id: ";
     String MESSAGE = "Message: ";
