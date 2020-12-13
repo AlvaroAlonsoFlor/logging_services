@@ -37,7 +37,7 @@ public class LogWriterService {
                     break;
             }
         } catch (JsonProcessingException e) {
-            e.printStackTrace();
+            logger.error(e.getMessage());
         }
 
     }
