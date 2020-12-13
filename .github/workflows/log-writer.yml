@@ -4,11 +4,9 @@ on:
   push:
     paths:
       - 'log-writer/*'
-    branches: [ main ]
   pull_request:
     paths:
       - 'log-writer/*'
-    branches: [ main ]
 
 jobs:
   build:
