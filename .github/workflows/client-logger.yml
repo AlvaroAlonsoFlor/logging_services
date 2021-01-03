@@ -1,0 +1,23 @@
+name: client-logger ci
+
+on:
+  push:
+    paths:
+      - 'client-logger/**'
+  pull_request:
+    paths:
+      - 'client-logger/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.15.3
+      - name: Run tests
+        run: npm run test:coverage
+
+
