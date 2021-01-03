@@ -21,6 +21,9 @@
     "service",
     "utility"
   ],
+  "prettier": {
+    "printWidth": 120
+  },
   "author": "Alvaro Alonso",
   "license": "ISC",
   "dependencies": {},

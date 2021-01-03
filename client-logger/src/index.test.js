@@ -1,6 +1,6 @@
 const { LOG_LEVELS, log } = require("./index");
 const { createServer, Response } = require("miragejs");
-fetch = require("node-fetch");
+require("node-fetch");
 
 beforeAll(() => {
   const server = createServer({
