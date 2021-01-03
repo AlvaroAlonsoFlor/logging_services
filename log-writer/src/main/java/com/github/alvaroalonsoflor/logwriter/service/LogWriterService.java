@@ -2,7 +2,6 @@ package com.github.alvaroalonsoflor.logwriter.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.github.alvaroalonsoflor.logwriter.controller.LogWriterController;
 import com.github.alvaroalonsoflor.logwriter.model.LogParameters;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
