@@ -1,0 +1,35 @@
+{
+  "name": "client-logger",
+  "version": "1.0.0",
+  "description": "A logger service to send log messages to the backend",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "jest --collectCoverage",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "keywords": [
+    "logging",
+    "auditing",
+    "spa",
+    "service",
+    "utility"
+  ],
+  "author": "Alvaro Alonso",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "husky": "^4.3.6",
+    "jest": "^26.6.3",
+    "miragejs": "^0.1.41",
+    "node-fetch": "^2.6.1",
+    "prettier": "2.2.1",
+    "pretty-quick": "^3.1.0"
+  }
+}
