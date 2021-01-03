@@ -17,7 +17,6 @@ beforeAll(() => {
   server.logging = false;
 });
 
-
 test("It should return a successful response when called with the right parameters", async () => {
   const response = await log("http://localhost:8080/log-data", {
     clientId: "test123",

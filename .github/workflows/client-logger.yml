@@ -13,15 +13,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Go to project folder
-        run: cd client-logger
       - name: Set up Node
         uses: actions/setup-node@v2
         with:
           node-version: 14.15.3
       - name: Install dependencies
-        run: npm install
+        run: cd client-logger && npm install
       - name: Run tests
-        run: npm run test:coverage
+        run: cd client-logger && npm run test:coverage
 
 
