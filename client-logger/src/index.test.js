@@ -8,7 +8,6 @@ beforeAll(() => {
       this.post("http://localhost:8080/log-data", (schema, request) => {
         let attrs = JSON.parse(request.requestBody);
         if (!(attrs.clientId && attrs.logLevel && attrs.message)) {
-          console.log("error called");
           return new Response(500, {}, { error: "test message" });
         }
       });
@@ -27,10 +26,13 @@ test("It should return a successful response when called with the right paramete
   expect(response.status).toBe(201);
 });
 
-test("It should return a", async () => {
-  const response = await log("http://localhost:8080/log-data", {
-    malformedKey: "test123",
-  });
-  expect(response.ok).toBeFalsy();
-  expect(response.status).toBe(500);
+test("It should throw an error if required keys are not the right type", async () => {
+  const malformedParams = async () => {
+    await log("http://localhost:8080/log-data", {
+      malformedKey: "test123",
+    })
+  }
+
+  return expect(malformedParams()).rejects.toThrowError(new TypeError("clientId, level and message must be strings"));
+
 });
